@@ -133,7 +133,7 @@ fun MenuScreenButtonGroup(
     }
 }
 
-@Preview(showSystemUi = true)
+@Preview
 @Composable
 fun MenuScreenPreview() {
     BuffBitesTheme {

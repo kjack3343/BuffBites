@@ -8,16 +8,24 @@ import androidx.compose.runtime.getValue
 import com.example.buffbites.ui.OrderViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 
+// TODO: Screen enum
+
+// TODO: TopAppBar
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BuffBitesApp(
     viewModel: OrderViewModel = viewModel()
 ) {
+    // TODO: Add navigation dependency to gradle script
+    // TODO: Create Controller and initialization
 
     Scaffold(
         topBar = { /* TODO */ }
     ) { innerPadding ->
         val uiState by viewModel.uiState.collectAsState()
+
+        // TODO: Navigation host
 
     }
 }

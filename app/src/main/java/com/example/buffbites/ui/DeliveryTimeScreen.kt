@@ -24,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.buffbites.R
+import com.example.buffbites.ui.theme.BuffBitesTheme
 import java.text.NumberFormat
 
 @Composable
@@ -105,11 +106,18 @@ fun ChooseDeliveryTimeScreen(
 @Preview
 @Composable
 fun ChooseDeliveryTimePreview() {
-    ChooseDeliveryTimeScreen(
-        subtotal = 299.99,
-        options = listOf("Mon Sep 18 6:00 PM", "Mon Sep 18 7:00 PM", "Mon Sep 18 8:00 PM", "Mon Sep 18 9:00 PM"),
-        modifier = Modifier
-            .fillMaxHeight()
-            .padding(16.dp)
-    )
+    BuffBitesTheme {
+        ChooseDeliveryTimeScreen(
+            subtotal = 299.99,
+            options = listOf(
+                "Mon Sep 18 6:00 PM",
+                "Mon Sep 18 7:00 PM",
+                "Mon Sep 18 8:00 PM",
+                "Mon Sep 18 9:00 PM"
+            ),
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(16.dp)
+        )
+    }
 }
