@@ -18,4 +18,5 @@
     <string name="order_details">Vendor: %1$s \nMenu Item: %2$s \nDelivery Time: %3$s \nTotal: %4$s \n\nThank you!</string>
     <string name="select_vendor">Select a vendor for delivery</string>
     <string name="select_a_delivery_time">Select a delivery time.</string>
+    <string name="new_buffbites_order">New Buff Bites Order</string>
 </resources>

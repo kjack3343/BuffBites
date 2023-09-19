@@ -38,7 +38,7 @@ fun OrderSummaryScreen(
     val vendorName = orderUiState.selectedVendor?.name?.let { stringResource(it) } ?: ""
 
     // Order Subject and Summary text to send to another app for extra credit
-    val orderSubject = "New WTFood Order"
+    val orderSubject = stringResource(R.string.new_buffbites_order)
     val orderSummary = stringResource(
         R.string.order_details,
         vendorName,
