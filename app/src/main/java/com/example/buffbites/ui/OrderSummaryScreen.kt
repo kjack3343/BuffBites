@@ -27,7 +27,11 @@ import java.text.NumberFormat
 @Composable
 fun OrderSummaryScreen(
     orderUiState: OrderUiState,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+
+    onSubmitButtonClicked: () -> Unit,
+    onSendButtonClicked: (String, String) -> Unit,
+
 ) {
     // Format all prices into strings with dollar sign and 2 decimal places (e.g. $4.99)
     val formattedSubTotal = NumberFormat.getCurrencyInstance().format(orderUiState.orderSubtotal)
@@ -96,13 +100,13 @@ fun OrderSummaryScreen(
         ) {
             OutlinedButton(
                 modifier = Modifier.weight(1f),
-                onClick = { /* TODO */ }
+                onClick = {onSendButtonClicked(newMeal, orderSummary)  }
             ) {
                 Text(stringResource(R.string.cancel))
             }
             Button(
                 modifier = Modifier.weight(1f),
-                onClick = { /* TODO */ }
+                onClick = onSubmitButtonClicked
             ) {
                 Text(stringResource(R.string.submit))
             }

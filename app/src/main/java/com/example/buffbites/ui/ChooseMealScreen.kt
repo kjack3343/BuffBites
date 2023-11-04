@@ -33,9 +33,11 @@ import java.text.NumberFormat
 
 @Composable
 fun ChooseMenuScreen(
-    options: List<MenuItem>,
+    options: List<String>,
     onSelectionChanged: (MenuItem) -> Unit,
     modifier: Modifier = Modifier,
+    onCancelButtonClicked: () -> Unit = {},
+    onNextButtonClicked: () -> Unit = {},
 ) {
     var selectedItemName by rememberSaveable { mutableStateOf("") }
 
@@ -44,7 +46,7 @@ fun ChooseMenuScreen(
     ) {
         options.forEach { item ->
             val onClick = {
-                selectedItemName = item.name
+                selectedItemName = item,
                 onSelectionChanged(item)
             }
             MenuItemRow(
